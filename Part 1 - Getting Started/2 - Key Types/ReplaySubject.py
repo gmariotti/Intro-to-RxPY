@@ -3,8 +3,8 @@ from time import sleep
 from rx.subjects import ReplaySubject
 from rx.concurrency.immediatescheduler import ImmediateScheduler
 
-lambda_early = lambda x: print("Early:{}".format(x))
-lambda_late = lambda x: print("Late: {}".format(x))
+lambda_early = lambda v: print("Early:{}".format(v))
+lambda_late = lambda v: print("Late: {}".format(v))
 
 subject = ReplaySubject()
 subject.subscribe(on_next=lambda_early)
