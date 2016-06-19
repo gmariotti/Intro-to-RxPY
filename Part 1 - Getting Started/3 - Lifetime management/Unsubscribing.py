@@ -2,8 +2,8 @@ from rx.subjects import ReplaySubject
 
 values = ReplaySubject()
 subscription = values.subscribe(
-    on_next=lambda v: print(v),
-    on_error=lambda e: print(e),
+    on_next=print,
+    on_error=print,
     on_completed=lambda: print("Done")
 )
 values.on_next(0)

@@ -1,7 +1,7 @@
 from rx.subjects import AsyncSubject
 
 subject = AsyncSubject()
-subject.subscribe(on_next=lambda v: print(v))
+subject.subscribe(on_next=print)
 subject.on_next(0)
 subject.on_next(1)
 subject.on_next(2)
